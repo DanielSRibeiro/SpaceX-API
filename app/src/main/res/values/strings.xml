@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SpaceX</string>
+    <string name="nome">Nome</string>
+    <string name="data">Data</string>
+    <string name="sucesso">Sucesso</string>
+    <string name="tipo">Tipo</string>
 </resources>

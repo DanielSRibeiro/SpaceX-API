@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.icu.text.CaseMap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.spacex_api.Model.Payloads;
 import com.example.spacex_api.Model.RocketModel;
 import com.example.spacex_api.Network.APIService;
 import com.example.spacex_api.R;
@@ -34,12 +31,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
+        chamaRetrofit();
+
+    }
+
+    private void initView() {
         recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.progressBar);
-
         progressBar.setVisibility(View.VISIBLE);
+    }
 
-        APIService service = RestClient.getService();
+    private void chamaRetrofit() {
+        APIService service = ApiClient.getService();
         service.getRockets("desc").enqueue(new Callback<ArrayList<RocketModel>>() {
             @Override
             public void onResponse(Call<ArrayList<RocketModel>> call, Response<ArrayList<RocketModel>> response) {
@@ -59,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
-
     }
 
     private void chamaAdapter() {

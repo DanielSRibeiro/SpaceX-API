@@ -5,7 +5,7 @@ import com.example.spacex_api.Network.APIService;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RestClient {
+public class ApiClient {
 
     public static APIService getService(){
         Retrofit retrofit = new Retrofit.Builder()
