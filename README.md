@@ -11,4 +11,8 @@ Foi realizado um aplicativo que consume uma API da SpaceX que mostra o Nome, Dat
 
 
 
-<img src="https://github.com/DanielSRibeiro/SpaceX/blob/main/img.jpeg" style="zoom:40%;" />
+<img src="https://github.com/DanielSRibeiro/SpaceX/blob/main/img.jpeg" width="30%" />
+</br>
+
+<h3>Link da API</h3>
+https://github.com/r-spacex/SpaceX-API
